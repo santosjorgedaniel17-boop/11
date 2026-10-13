@@ -1,0 +1,83 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fale conosco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="card">
+        <h1>Fale conosco</h1>
+        <p class="subtitulo">Campos com * são obrigatórios.</p>
+
+        <form action="#" method="post">
+            <div class="campo">
+                <label for="nome">Nome *</label>
+                <input type="text" id="nome" name="nome"
+                    placeholder="Seu nome completo"
+                    minlength="3" required>
+                <small class="erro">Informe ao menos 3 caracteres.</small>
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail *</label>
+                <input type="email" id="email" name="email"
+                    placeholder="maria@exemplo.com" required>
+                <small class="erro">Digite um e-mail válido.</small>
+            </div>
+
+            <div class="campo">
+                <label for="telefone">Telefone *</label>
+                <input type="tel" id="telefone" name="telefone"
+                    placeholder="(11) 99999-9999"
+                    pattern="\(\d{2}\) \d{4,5}-\d{4}" required>
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha *</label>
+                <input type="password" id="senha" name="senha"
+                    placeholder="Mínimo 8 caracteres"
+                    minlength="8" required>
+                <small class="erro">A senha deve ter 8 ou mais caracteres.</small>
+            </div>
+
+            <div class="campo">
+                <label for="confirmar-senha">Confirmar senha *</label>
+                <input type="password" id="confirmar-senha"
+                    name="confirmar-senha"
+                    placeholder="Confirme sua senha" required>
+            </div>
+
+            <div class="campo">
+                <label for="idade">Idade</label>
+                <input type="number" id="idade" name="idade"
+                    min="18" max="99" placeholder="18 a 99">
+                <small class="erro">Informe um valor entre 18 e 99.</small>
+            </div>
+
+            <div class="campo">
+                <label for="assunto">Assunto *</label>
+                <select id="assunto" name="assunto" required>
+                    <option value="">Selecione...</option>
+                    <option value="duvida">Dúvida</option>
+                    <option value="sugestao">Sugestão</option>
+                    <option value="reclamacao">Reclamação</option>
+                    <option value="outros">Outros</option>
+                </select>
+            </div>
+
+            <div class="campo">
+                <label for="mensagem">Mensagem *</label>
+                <textarea id="mensagem" name="mensagem"
+                    placeholder="Escreva sua mensagem..."
+                    minlength="10" required></textarea>
+                <small class="erro">Escreva ao menos 10 caracteres.</small>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+    </main>
+</body>
+</html>
